@@ -19,7 +19,7 @@ function useShowing() {
   const time = useTime();
 
   useEffect(() => {
-    if (time.getHours() === 12 && time.getMinutes() === 34) {
+    if ((time.getHours() === 0 || time.getHours() === 12) && time.getMinutes() === 34) {
       setShowing(true);
     }
   }, [time]);
